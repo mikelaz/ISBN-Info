@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA75B4711C9C11A4002CC03B /* Modelo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA75B4701C9C11A4002CC03B /* Modelo.swift */; };
 		DA9F81561C92E60D00728493 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9F81551C92E60D00728493 /* AppDelegate.swift */; };
 		DA9F81581C92E60D00728493 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9F81571C92E60D00728493 /* ViewController.swift */; };
 		DA9F815B1C92E60D00728493 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA9F81591C92E60D00728493 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA75B4701C9C11A4002CC03B /* Modelo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Modelo.swift; sourceTree = "<group>"; };
 		DA9F81521C92E60D00728493 /* ISBN-Info.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ISBN-Info.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA9F81551C92E60D00728493 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA9F81571C92E60D00728493 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				DA9F81551C92E60D00728493 /* AppDelegate.swift */,
 				DA9F81571C92E60D00728493 /* ViewController.swift */,
 				DA9F81591C92E60D00728493 /* Main.storyboard */,
+				DA75B4701C9C11A4002CC03B /* Modelo.swift */,
 				DA9F815C1C92E60D00728493 /* Assets.xcassets */,
 				DA9F815E1C92E60D00728493 /* LaunchScreen.storyboard */,
 				DA9F81611C92E60D00728493 /* Info.plist */,
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA75B4711C9C11A4002CC03B /* Modelo.swift in Sources */,
 				DA9F81581C92E60D00728493 /* ViewController.swift in Sources */,
 				DA9F81561C92E60D00728493 /* AppDelegate.swift in Sources */,
 			);
@@ -288,6 +292,7 @@
 				DA9F81661C92E60D00728493 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

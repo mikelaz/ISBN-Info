@@ -11,8 +11,11 @@ import UIKit
 class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var entradaTexto: UITextField!
+    @IBOutlet weak var tituloLibro: UITextView!
+    @IBOutlet weak var autoresLibro: UITextView!
+    @IBOutlet weak var portadaLibro: UIImageView!
     
-    @IBOutlet weak var textViewResultado: UITextView!
+    var libro = LiBroOpenLibrary()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,25 +35,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         entradaTexto.keyboardType = .NumbersAndPunctuation
         entradaTexto.spellCheckingType = .No
         entradaTexto.autocorrectionType = .No
-    }
-    
-    func llamadaSincronaOpenLibrary (isbn: String)->String{
-        
-        var urlString = "https://openlibrary.org/api/books?jscmd=data&format=json&bibkeys=ISBN:"
-        urlString = "\(urlString)\(isbn)"
-        let url = NSURL (string: urlString)
-        let datos:NSData? = NSData(contentsOfURL: url!)
-        if datos != nil{
-            let resultado = NSString(data:datos!, encoding: NSUTF8StringEncoding)
-            if resultado == "{}"{
-                return ("ISBN no encontrado")
-            }else{
-                return resultado! as String
-            }
-        }else{
-            return ("Error en la conexión con openlibrary.org")
-        }
-        
     }
     
     func lanzarAlerta(titulo: String, mensaje: String){
@@ -73,13 +57,40 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func textFieldDoneEditing(sender: UITextField) {
         
         //Lanzado al hacer click en buscar (finalizar edición)
-        textViewResultado.text!.removeAll()
         if (entradaTexto.text!.isEmpty){
             lanzarAlerta("Aviso", mensaje: "Introduzca un ISBN")
         }else{
-            textViewResultado.text = llamadaSincronaOpenLibrary(entradaTexto.text!)
+            let resultado = libro.obtenerDatosDeISBN(entradaTexto.text!)
+            if resultado == -1 {
+                lanzarAlerta("Aviso", mensaje: "Error en la conexión con openlibrary.org")
+            }else if resultado == -2 {
+                lanzarAlerta("Aviso", mensaje: "ISBN no encontrado")
+            }else if resultado == 0 {
+                self.tituloLibro.text=libro.titulo
+                //Borramos el contenido del cuadro de texto
+                self.autoresLibro.text=""
+                //Recorremos el array de autores y lo imprimimos con un salto de línea por cada autor
+                for i in 0..<libro.autores.count{
+                    self.autoresLibro.text = libro.autores[i]! + "\r\n" + self.autoresLibro.text!
+                }
+                //Descargamos la imagen de la portada
+                let imagen:NSData? = NSData(contentsOfURL: libro.portada!)
+                //convertimos el objeto NSData descargado en objeto UIImage y se lo entregamos al contenedor Image View
+                self.portadaLibro.image = UIImage(data: imagen!)
+                self.portadaLibro.sizeToFit()
+                //Hacemos visible el contenedor si es que estaba oculto
+                self.portadaLibro.hidden = false
+            }else if resultado == 1{
+                self.tituloLibro.text=libro.titulo
+                self.autoresLibro.text=""
+                for i in 0..<libro.autores.count{
+                    self.autoresLibro.text = libro.autores[i]! + "\r\n" + self.autoresLibro.text!
+                }
+                //ocultamos el contenedor Image View en este caso ya que no existe portada
+                self.portadaLibro.hidden = true
+            }
         }
-        //ocultar teclado
+        //ocultar teclado tras pulsar Search
         sender.resignFirstResponder()
     }
     

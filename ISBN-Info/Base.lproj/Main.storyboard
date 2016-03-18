@@ -17,61 +17,85 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fgg-4B-37m">
-                                <rect key="frame" x="194" y="119" width="233" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="233" id="nS0-Zx-PTa"/>
-                                </constraints>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fgg-4B-37m">
+                                <rect key="frame" x="184" y="73" width="233" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="textFieldDoneEditing:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="VAT-il-F6H"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ISBN Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgq-7l-4aW">
-                                <rect key="frame" x="250" y="64" width="81" height="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="ISBN Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgq-7l-4aW">
+                                <rect key="frame" x="260" y="20" width="81" height="22"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Información en bruto   Ofrecida por Openlibrary.org" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLD-oa-LRB">
-                                <rect key="frame" x="196" y="177" width="223" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Título" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pVo-8b-q1U">
+                                <rect key="frame" x="166" y="174" width="54" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Autores" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saM-Pt-Bx1">
+                                <rect key="frame" x="166" y="249" width="71" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Información  Ofrecida por Openlibrary.org" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLD-oa-LRB">
+                                <rect key="frame" x="189" y="118" width="223" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jVE-lM-Qdp">
-                                <rect key="frame" x="161" y="243" width="292" height="178"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nL7-Bc-rc7">
+                                <rect key="frame" x="182" y="271" width="240" height="56"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="292" id="3ib-BK-2oX"/>
-                                </constraints>
                                 <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Portada" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyP-cb-NcN">
+                                <rect key="frame" x="166" y="335" width="71" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CDh-bJ-9M3">
+                                <rect key="frame" x="182" y="364" width="240" height="144"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4Tj-zz-fT3">
+                                <rect key="frame" x="184" y="199" width="240" height="43"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="dLD-oa-LRB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Qg-zR-7a8"/>
-                            <constraint firstItem="fgg-4B-37m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Aq2-bS-s9R"/>
-                            <constraint firstItem="dLD-oa-LRB" firstAttribute="top" secondItem="fgg-4B-37m" secondAttribute="bottom" constant="28" id="Baj-LB-ZY2"/>
-                            <constraint firstItem="jVE-lM-Qdp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KTN-xg-iA6"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jVE-lM-Qdp" secondAttribute="bottom" constant="179" id="MT3-0C-id8"/>
-                            <constraint firstItem="tgq-7l-4aW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="NfC-pg-SGt"/>
-                            <constraint firstItem="jVE-lM-Qdp" firstAttribute="top" secondItem="dLD-oa-LRB" secondAttribute="bottom" constant="25" id="QZm-1l-2bd"/>
-                            <constraint firstItem="fgg-4B-37m" firstAttribute="top" secondItem="tgq-7l-4aW" secondAttribute="bottom" constant="33" id="XXa-xp-yT4"/>
-                            <constraint firstItem="tgq-7l-4aW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nV0-aa-ji7"/>
+                            <constraint firstItem="dLD-oa-LRB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4s5-c4-9t9"/>
+                            <constraint firstItem="fgg-4B-37m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6FA-nd-jNW"/>
+                            <constraint firstItem="4Tj-zz-fT3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="4" id="6gE-Et-Cik"/>
+                            <constraint firstItem="saM-Pt-Bx1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-98.5" id="8md-78-aVk"/>
+                            <constraint firstItem="hyP-cb-NcN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-98.5" id="GqH-vI-GD6"/>
+                            <constraint firstItem="pVo-8b-q1U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-107" id="LOR-D5-JtU"/>
+                            <constraint firstItem="tgq-7l-4aW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SJ8-vA-YJX"/>
+                            <constraint firstItem="nL7-Bc-rc7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="2" id="YRZ-84-XXn"/>
+                            <constraint firstItem="CDh-bJ-9M3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="2" id="jhK-k3-7yK"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="autoresLibro" destination="nL7-Bc-rc7" id="uy1-KS-yte"/>
                         <outlet property="entradaTexto" destination="fgg-4B-37m" id="Frq-6a-yDi"/>
-                        <outlet property="textViewResultado" destination="jVE-lM-Qdp" id="DOD-jB-vy5"/>
+                        <outlet property="portadaLibro" destination="CDh-bJ-9M3" id="nn7-uC-bhY"/>
+                        <outlet property="tituloLibro" destination="4Tj-zz-fT3" id="Cmw-NP-oPq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="298" y="385"/>
+            <point key="canvasLocation" x="422" y="285"/>
         </scene>
     </scenes>
 </document>
